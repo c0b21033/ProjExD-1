@@ -76,7 +76,7 @@ class Bird: #こうかとん（操作可能キャラクター）クラス
         #y軸に動かす
         self.rct.centery += self.speed_y
         
-        pg.draw.rect(scr.sfc, (255, 0, 0), (self.rct.right, self.rct.centery, 20, 52))
+        pg.draw.rect(scr.sfc, (255, 128, 0), (self.rct.right, self.rct.centery, 20, 52))
         pg.draw.rect(scr.sfc, (255, 255, 255), (self.rct.right, self.rct.centery, 20, 52-self.jump_power*-3))
 
     #壁と天井の判定
@@ -153,8 +153,8 @@ class Text: #テキスト表示クラス（だんだん近づいてくる機能�
                 if event.type == pg.QUIT:
                     return
 def main(): #メイン
-    scr = Screen("飛べ！こうかとん", (600, 800), "ex06/aozora.jpg")
-    bird = Bird("fig/1.png", 2.0, (300, 700))
+    scr = Screen("飛べ！こうかとん", (600, 800), "ProjExD-1/fig/aozora.jpg")
+    bird = Bird("ProjExD-1/fig/1.png", 2.0, (300, 700))
     foot = FootFold(100, scr) #足場1
     foot1 = FootFold(300, scr) #足場2
     foot2 = FootFold(500, scr) #足場3
