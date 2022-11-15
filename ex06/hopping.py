@@ -40,8 +40,6 @@ class Screen:
         self.rct = self.sfc.get_rect()
         self.bgi_sfc = pg.image.load(bg_file)
         self.bgi_rct = self.bgi_sfc.get_rect()
-        self.bgi_sfc2 = pg.image.load(bg_file)
-        self.bgi_rct2 = self.bgi_sfc2.get_rect()
 
     def blit(self):
         self.sfc.blit(self.bgi_sfc, self.bgi_rct)
@@ -160,8 +158,8 @@ class Text:
 
 
 def main():
-    scr = Screen("飛べ！こうかとん", (600, 800), "ex06/aozora.jpg")
-    bird = Bird("fig/1.png", 2.0, (300, 700))
+    scr = Screen("飛べ！こうかとん", (600, 800), "ProjExD-1/fig/background.jpg")
+    bird = Bird("ProjExD-1/fig/1.png", 2.0, (300, 700))
     foot = FootFold(100, scr)
     foot1 = FootFold(300, scr)
     foot2 = FootFold(500, scr)
