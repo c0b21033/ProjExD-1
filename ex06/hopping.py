@@ -45,7 +45,6 @@ class Bird:
         self.rct = self.sfc.get_rect()
         self.rct.center = default[0], default[1]
         self.vx = 0    #横方向の移動のための変数（着地したら0になる）
-        self.vy = 0    #上方向にどのくらいいけるかを溜める溜めに使う変数
 
         self.jump_power = 0
         self.speed_y = 0
